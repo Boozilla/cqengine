@@ -482,7 +482,7 @@ public class AttributeBytecodeGenerator {
             attributeClass.addMethod(getterBridgeMethod);
 
             @SuppressWarnings("unchecked")
-            R result = (R) attributeClass.toClass(pojoClass.getClassLoader(), pojoClass.getProtectionDomain());
+            R result = (R) attributeClass.toClass(Attribute.class);
             attributeClass.detach();
             return result;
         } catch (Exception e) {
@@ -547,7 +547,7 @@ public class AttributeBytecodeGenerator {
             attributeClass.addMethod(getterBridgeMethod);
 
             @SuppressWarnings("unchecked")
-            R result = (R) attributeClass.toClass(pojoClass.getClassLoader(), pojoClass.getProtectionDomain());
+            R result = (R) attributeClass.toClass(Attribute.class);
             attributeClass.detach();
             return result;
         } catch (Exception e) {
